@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "name": "Dclutr",
+    "version": "1.0",
+
+    "author": "Hedreon",
+    "description": "A mozilla-only addon that declutters websites",
+
+    "icons": {
+        "16": "assets/logo.svg",
+        "32": "assets/logo.svg",
+        "48": "assets/logo.svg",
+        "64": "assets/logo.svg",
+        "96": "assets/logo.svg"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": ["src/main.js"],
+            "css": ["src/styles.css"]
+        }
+    ],
+
+    "browser_action": {
+        "browser_style": false,
+        "default_icon": {
+          "16": "img/icon_16.png",
+          "32": "img/icon_32.png"
+        },
+        "default_title": "DClutrD",
+        "default_popup": "popup.html"
+      }
+}
